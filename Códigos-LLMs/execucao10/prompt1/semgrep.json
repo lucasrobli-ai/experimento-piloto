@@ -1,0 +1,908 @@
+{
+    "version": "1.152.0",
+    "results": [
+        {
+            "check_id": "python.flask.debug.debug-flask.active-debug-code-flask",
+            "path": "modelo-claude/codigo-gerado.py",
+            "start": {
+                "line": 53,
+                "col": 5,
+                "offset": 1622
+            },
+            "end": {
+                "line": 53,
+                "col": 24,
+                "offset": 1641
+            },
+            "extra": {
+                "metavars": {},
+                "message": "The application is running debug code or has debug mode enabled. This may expose sensitive information, like stack traces and environment variables, to attackers. It may also modify application behavior, potentially enabling attackers to bypass restrictions. To remediate this finding, ensure that the application's debug code and debug mode are disabled or removed from the production environment.",
+                "metadata": {
+                    "likelihood": "LOW",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "category": "security",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "cwe": [
+                        "CWE-489: Active Debug Code"
+                    ],
+                    "display-name": "Active Debug Code in Flask",
+                    "functional-categories": [
+                        "debug::search::active-debug-code"
+                    ],
+                    "references": [
+                        "https://flask.palletsprojects.com/en/3.0.x/debugging/"
+                    ],
+                    "technology": [
+                        "flask",
+                        "python"
+                    ],
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Active Debug Code"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.debug.debug-flask.active-debug-code-flask",
+                    "shortlink": "https://sg.run/lBbpB",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "pro_rules",
+                            "r_id": 116513,
+                            "rule_id": "zdUKBnK",
+                            "rv_id": 947918,
+                            "url": "https://semgrep.dev/playground/r/ZRT3q9v/python.flask.debug.debug-flask.active-debug-code-flask",
+                            "version_id": "ZRT3q9v"
+                        }
+                    }
+                },
+                "severity": "INFO",
+                "fingerprint": "5e43d4535e00b41c1db9d60a1e891c4d706a089997ba4005f22b985ceba3e0cfa6c8566ed9c82c71144e3668485573c5049a5126898ee127a9af78d31627f8b2_0",
+                "lines": "    app.run(debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+            "path": "modelo-claude/codigo-gerado.py",
+            "start": {
+                "line": 53,
+                "col": 5,
+                "offset": 1622
+            },
+            "end": {
+                "line": 53,
+                "col": 24,
+                "offset": 1641
+            },
+            "extra": {
+                "metavars": {
+                    "$APP": {
+                        "start": {
+                            "line": 53,
+                            "col": 5,
+                            "offset": 1622
+                        },
+                        "end": {
+                            "line": 53,
+                            "col": 8,
+                            "offset": 1625
+                        },
+                        "abstract_content": "app",
+                        "propagated_value": {
+                            "svalue_start": {
+                                "line": 5,
+                                "col": 7,
+                                "offset": 187
+                            },
+                            "svalue_end": {
+                                "line": 5,
+                                "col": 22,
+                                "offset": 202
+                            },
+                            "svalue_abstract_content": "Flask(__name__)"
+                        }
+                    }
+                },
+                "message": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-489: Active Debug Code"
+                    ],
+                    "owasp": "A06:2017 - Security Misconfiguration",
+                    "references": [
+                        "https://labs.detectify.com/2015/10/02/how-patreon-got-hacked-publicly-exposed-werkzeug-debugger/"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "flask"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "HIGH",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Active Debug Code"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.security.audit.debug-enabled.debug-enabled",
+                    "shortlink": "https://sg.run/dKrd",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "community",
+                            "r_id": 9534,
+                            "rule_id": "gxU1bd",
+                            "rv_id": 946206,
+                            "url": "https://semgrep.dev/playground/r/8KTKjwR/python.flask.security.audit.debug-enabled.debug-enabled",
+                            "version_id": "8KTKjwR"
+                        }
+                    }
+                },
+                "severity": "WARNING",
+                "fingerprint": "103ac2671db6015b8346042506794fe8b45b2d312b34c96cbf6ed5a782342611ccd1c368673a342e87435fb48cf905307a8046306cc4487ee86230883e799da8_0",
+                "lines": "    app.run(debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.debug.debug-flask.active-debug-code-flask",
+            "path": "modelo-gpt4.0/codigo-gerado.py",
+            "start": {
+                "line": 45,
+                "col": 5,
+                "offset": 1469
+            },
+            "end": {
+                "line": 45,
+                "col": 24,
+                "offset": 1488
+            },
+            "extra": {
+                "metavars": {},
+                "message": "The application is running debug code or has debug mode enabled. This may expose sensitive information, like stack traces and environment variables, to attackers. It may also modify application behavior, potentially enabling attackers to bypass restrictions. To remediate this finding, ensure that the application's debug code and debug mode are disabled or removed from the production environment.",
+                "metadata": {
+                    "likelihood": "LOW",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "category": "security",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "cwe": [
+                        "CWE-489: Active Debug Code"
+                    ],
+                    "display-name": "Active Debug Code in Flask",
+                    "functional-categories": [
+                        "debug::search::active-debug-code"
+                    ],
+                    "references": [
+                        "https://flask.palletsprojects.com/en/3.0.x/debugging/"
+                    ],
+                    "technology": [
+                        "flask",
+                        "python"
+                    ],
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Active Debug Code"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.debug.debug-flask.active-debug-code-flask",
+                    "shortlink": "https://sg.run/lBbpB",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "pro_rules",
+                            "r_id": 116513,
+                            "rule_id": "zdUKBnK",
+                            "rv_id": 947918,
+                            "url": "https://semgrep.dev/playground/r/ZRT3q9v/python.flask.debug.debug-flask.active-debug-code-flask",
+                            "version_id": "ZRT3q9v"
+                        }
+                    }
+                },
+                "severity": "INFO",
+                "fingerprint": "39ea9b53cf0893025e0ff5aa4832efc7d1255039145644fbd8a1c293916e576319f87e3a023387faeca8ca961c533b3ca0733822edb061fc22e024fb092a7997_0",
+                "lines": "    app.run(debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+            "path": "modelo-gpt4.0/codigo-gerado.py",
+            "start": {
+                "line": 45,
+                "col": 5,
+                "offset": 1469
+            },
+            "end": {
+                "line": 45,
+                "col": 24,
+                "offset": 1488
+            },
+            "extra": {
+                "metavars": {
+                    "$APP": {
+                        "start": {
+                            "line": 45,
+                            "col": 5,
+                            "offset": 1469
+                        },
+                        "end": {
+                            "line": 45,
+                            "col": 8,
+                            "offset": 1472
+                        },
+                        "abstract_content": "app",
+                        "propagated_value": {
+                            "svalue_start": {
+                                "line": 3,
+                                "col": 7,
+                                "offset": 92
+                            },
+                            "svalue_end": {
+                                "line": 3,
+                                "col": 22,
+                                "offset": 107
+                            },
+                            "svalue_abstract_content": "Flask(__name__)"
+                        }
+                    }
+                },
+                "message": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-489: Active Debug Code"
+                    ],
+                    "owasp": "A06:2017 - Security Misconfiguration",
+                    "references": [
+                        "https://labs.detectify.com/2015/10/02/how-patreon-got-hacked-publicly-exposed-werkzeug-debugger/"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "flask"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "HIGH",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Active Debug Code"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.security.audit.debug-enabled.debug-enabled",
+                    "shortlink": "https://sg.run/dKrd",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "community",
+                            "r_id": 9534,
+                            "rule_id": "gxU1bd",
+                            "rv_id": 946206,
+                            "url": "https://semgrep.dev/playground/r/8KTKjwR/python.flask.security.audit.debug-enabled.debug-enabled",
+                            "version_id": "8KTKjwR"
+                        }
+                    }
+                },
+                "severity": "WARNING",
+                "fingerprint": "f5868a073b67c40c5a9361ca1afa8b330f1387482a15e2496e381132207a1f7a9d9ded02038419f2563aebbf79ddb96fdea8175689664a82279ddac429ae8b5d_0",
+                "lines": "    app.run(debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.security.audit.render-template-string.render-template-string",
+            "path": "modelo-gpt4.1/codigo-gerado.py",
+            "start": {
+                "line": 27,
+                "col": 20,
+                "offset": 868
+            },
+            "end": {
+                "line": 27,
+                "col": 91,
+                "offset": 939
+            },
+            "extra": {
+                "metavars": {},
+                "message": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-96: Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')"
+                    ],
+                    "owasp": [
+                        "A03:2021 - Injection",
+                        "A05:2025 - Injection"
+                    ],
+                    "references": [
+                        "https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "flask"
+                    ],
+                    "subcategory": [
+                        "audit"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "MEDIUM",
+                    "confidence": "LOW",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Code Injection"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.security.audit.render-template-string.render-template-string",
+                    "shortlink": "https://sg.run/8yjE",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "community",
+                            "r_id": 9540,
+                            "rule_id": "5rUOv1",
+                            "rv_id": 1263423,
+                            "url": "https://semgrep.dev/playground/r/o5TbDp4/python.flask.security.audit.render-template-string.render-template-string",
+                            "version_id": "o5TbDp4"
+                        }
+                    }
+                },
+                "severity": "WARNING",
+                "fingerprint": "d75a5f27c0a707961e922eae7e2108da20987f41cc04ff36a18de884813b4243fddee0683b893c251453a80666bc1225a88fc7e0f5b6494f4d144b6a111f20df_0",
+                "lines": "            return render_template_string(LOGIN_HTML, erro='Usuário ou senha inválidos')",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.security.audit.render-template-string.render-template-string",
+            "path": "modelo-gpt4.1/codigo-gerado.py",
+            "start": {
+                "line": 28,
+                "col": 12,
+                "offset": 951
+            },
+            "end": {
+                "line": 28,
+                "col": 46,
+                "offset": 985
+            },
+            "extra": {
+                "metavars": {},
+                "message": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-96: Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')"
+                    ],
+                    "owasp": [
+                        "A03:2021 - Injection",
+                        "A05:2025 - Injection"
+                    ],
+                    "references": [
+                        "https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2.html"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "flask"
+                    ],
+                    "subcategory": [
+                        "audit"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "MEDIUM",
+                    "confidence": "LOW",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Code Injection"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.security.audit.render-template-string.render-template-string",
+                    "shortlink": "https://sg.run/8yjE",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "community",
+                            "r_id": 9540,
+                            "rule_id": "5rUOv1",
+                            "rv_id": 1263423,
+                            "url": "https://semgrep.dev/playground/r/o5TbDp4/python.flask.security.audit.render-template-string.render-template-string",
+                            "version_id": "o5TbDp4"
+                        }
+                    }
+                },
+                "severity": "WARNING",
+                "fingerprint": "d75a5f27c0a707961e922eae7e2108da20987f41cc04ff36a18de884813b4243fddee0683b893c251453a80666bc1225a88fc7e0f5b6494f4d144b6a111f20df_1",
+                "lines": "    return render_template_string(LOGIN_HTML)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.debug.debug-flask.active-debug-code-flask",
+            "path": "modelo-gpt4.1/codigo-gerado.py",
+            "start": {
+                "line": 53,
+                "col": 5,
+                "offset": 1562
+            },
+            "end": {
+                "line": 53,
+                "col": 24,
+                "offset": 1581
+            },
+            "extra": {
+                "metavars": {},
+                "message": "The application is running debug code or has debug mode enabled. This may expose sensitive information, like stack traces and environment variables, to attackers. It may also modify application behavior, potentially enabling attackers to bypass restrictions. To remediate this finding, ensure that the application's debug code and debug mode are disabled or removed from the production environment.",
+                "metadata": {
+                    "likelihood": "LOW",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "category": "security",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "cwe": [
+                        "CWE-489: Active Debug Code"
+                    ],
+                    "display-name": "Active Debug Code in Flask",
+                    "functional-categories": [
+                        "debug::search::active-debug-code"
+                    ],
+                    "references": [
+                        "https://flask.palletsprojects.com/en/3.0.x/debugging/"
+                    ],
+                    "technology": [
+                        "flask",
+                        "python"
+                    ],
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Active Debug Code"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.debug.debug-flask.active-debug-code-flask",
+                    "shortlink": "https://sg.run/lBbpB",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "pro_rules",
+                            "r_id": 116513,
+                            "rule_id": "zdUKBnK",
+                            "rv_id": 947918,
+                            "url": "https://semgrep.dev/playground/r/ZRT3q9v/python.flask.debug.debug-flask.active-debug-code-flask",
+                            "version_id": "ZRT3q9v"
+                        }
+                    }
+                },
+                "severity": "INFO",
+                "fingerprint": "860b7eabbac09dbe5276b443920ebb1f5750a5cea2f2b243acf77358b70ecc1baf15c65d8e379da9eab9a1dde39f466db3ea14661cda23d2a1eba0b5ce826621_0",
+                "lines": "    app.run(debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+            "path": "modelo-gpt4.1/codigo-gerado.py",
+            "start": {
+                "line": 53,
+                "col": 5,
+                "offset": 1562
+            },
+            "end": {
+                "line": 53,
+                "col": 24,
+                "offset": 1581
+            },
+            "extra": {
+                "metavars": {
+                    "$APP": {
+                        "start": {
+                            "line": 53,
+                            "col": 5,
+                            "offset": 1562
+                        },
+                        "end": {
+                            "line": 53,
+                            "col": 8,
+                            "offset": 1565
+                        },
+                        "abstract_content": "app",
+                        "propagated_value": {
+                            "svalue_start": {
+                                "line": 4,
+                                "col": 7,
+                                "offset": 120
+                            },
+                            "svalue_end": {
+                                "line": 4,
+                                "col": 22,
+                                "offset": 135
+                            },
+                            "svalue_abstract_content": "Flask(__name__)"
+                        }
+                    }
+                },
+                "message": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-489: Active Debug Code"
+                    ],
+                    "owasp": "A06:2017 - Security Misconfiguration",
+                    "references": [
+                        "https://labs.detectify.com/2015/10/02/how-patreon-got-hacked-publicly-exposed-werkzeug-debugger/"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "flask"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "HIGH",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Active Debug Code"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.security.audit.debug-enabled.debug-enabled",
+                    "shortlink": "https://sg.run/dKrd",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "community",
+                            "r_id": 9534,
+                            "rule_id": "gxU1bd",
+                            "rv_id": 946206,
+                            "url": "https://semgrep.dev/playground/r/8KTKjwR/python.flask.security.audit.debug-enabled.debug-enabled",
+                            "version_id": "8KTKjwR"
+                        }
+                    }
+                },
+                "severity": "WARNING",
+                "fingerprint": "51c0a9645c0a3855d3dc3c3392dbfffc508e54fa0ce6bd5d40668ff35c17ed5b5e1b5414df261d5653ffbd9387ea89ba1414de330d6a9beed1326d90afc0f815_0",
+                "lines": "    app.run(debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.debug.debug-flask.active-debug-code-flask",
+            "path": "modelo-gpt5.1mini/codigo-gerado.py",
+            "start": {
+                "line": 99,
+                "col": 5,
+                "offset": 3180
+            },
+            "end": {
+                "line": 99,
+                "col": 51,
+                "offset": 3226
+            },
+            "extra": {
+                "metavars": {},
+                "message": "The application is running debug code or has debug mode enabled. This may expose sensitive information, like stack traces and environment variables, to attackers. It may also modify application behavior, potentially enabling attackers to bypass restrictions. To remediate this finding, ensure that the application's debug code and debug mode are disabled or removed from the production environment.",
+                "metadata": {
+                    "likelihood": "LOW",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "category": "security",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "cwe": [
+                        "CWE-489: Active Debug Code"
+                    ],
+                    "display-name": "Active Debug Code in Flask",
+                    "functional-categories": [
+                        "debug::search::active-debug-code"
+                    ],
+                    "references": [
+                        "https://flask.palletsprojects.com/en/3.0.x/debugging/"
+                    ],
+                    "technology": [
+                        "flask",
+                        "python"
+                    ],
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Active Debug Code"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.debug.debug-flask.active-debug-code-flask",
+                    "shortlink": "https://sg.run/lBbpB",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "pro_rules",
+                            "r_id": 116513,
+                            "rule_id": "zdUKBnK",
+                            "rv_id": 947918,
+                            "url": "https://semgrep.dev/playground/r/ZRT3q9v/python.flask.debug.debug-flask.active-debug-code-flask",
+                            "version_id": "ZRT3q9v"
+                        }
+                    }
+                },
+                "severity": "INFO",
+                "fingerprint": "bf13cd81e6ed9865e0ce89f7e2027a834b45bd5de2158a7d68fde06dbbe1e8c716ba1e120a173bf89e98c9e5c34edb94b3bba170833019fcf2750647929b695a_0",
+                "lines": "    app.run(host=\"0.0.0.0\", port=5000, debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+            "path": "modelo-gpt5.1mini/codigo-gerado.py",
+            "start": {
+                "line": 99,
+                "col": 5,
+                "offset": 3180
+            },
+            "end": {
+                "line": 99,
+                "col": 51,
+                "offset": 3226
+            },
+            "extra": {
+                "metavars": {},
+                "message": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-668: Exposure of Resource to Wrong Sphere"
+                    ],
+                    "owasp": [
+                        "A01:2021 - Broken Access Control",
+                        "A01:2025 - Broken Access Control"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "flask"
+                    ],
+                    "references": [
+                        "https://owasp.org/Top10/A01_2021-Broken_Access_Control"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "HIGH",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+                    "shortlink": "https://sg.run/eLby",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "community",
+                            "r_id": 9532,
+                            "rule_id": "L1Uy1n",
+                            "rv_id": 1263414,
+                            "url": "https://semgrep.dev/playground/r/BjTkZOY/python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+                            "version_id": "BjTkZOY"
+                        }
+                    }
+                },
+                "severity": "WARNING",
+                "fingerprint": "9fac42d92c99f34cb96795b4c12f865e40aec83e64d8089866184f201abdd156978d3fb08c9e79520deea7f807b911c039367a08bb98f16393233c54bf8e3cc1_0",
+                "lines": "    app.run(host=\"0.0.0.0\", port=5000, debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+            "path": "modelo-gpt5.1mini/codigo-gerado.py",
+            "start": {
+                "line": 99,
+                "col": 5,
+                "offset": 3180
+            },
+            "end": {
+                "line": 99,
+                "col": 51,
+                "offset": 3226
+            },
+            "extra": {
+                "metavars": {
+                    "$APP": {
+                        "start": {
+                            "line": 99,
+                            "col": 5,
+                            "offset": 3180
+                        },
+                        "end": {
+                            "line": 99,
+                            "col": 8,
+                            "offset": 3183
+                        },
+                        "abstract_content": "app",
+                        "propagated_value": {
+                            "svalue_start": {
+                                "line": 11,
+                                "col": 7,
+                                "offset": 424
+                            },
+                            "svalue_end": {
+                                "line": 11,
+                                "col": 22,
+                                "offset": 439
+                            },
+                            "svalue_abstract_content": "Flask(__name__)"
+                        }
+                    }
+                },
+                "message": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-489: Active Debug Code"
+                    ],
+                    "owasp": "A06:2017 - Security Misconfiguration",
+                    "references": [
+                        "https://labs.detectify.com/2015/10/02/how-patreon-got-hacked-publicly-exposed-werkzeug-debugger/"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "flask"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "HIGH",
+                    "impact": "MEDIUM",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Active Debug Code"
+                    ],
+                    "source": "https://semgrep.dev/r/python.flask.security.audit.debug-enabled.debug-enabled",
+                    "shortlink": "https://sg.run/dKrd",
+                    "semgrep.dev": {
+                        "rule": {
+                            "origin": "community",
+                            "r_id": 9534,
+                            "rule_id": "gxU1bd",
+                            "rv_id": 946206,
+                            "url": "https://semgrep.dev/playground/r/8KTKjwR/python.flask.security.audit.debug-enabled.debug-enabled",
+                            "version_id": "8KTKjwR"
+                        }
+                    }
+                },
+                "severity": "WARNING",
+                "fingerprint": "41b7fda8a38e6e718049786b596942ef54c133eaeebb8854e63d76344b3233bd118916851fb3c82a4c32fd4d54869a863a654cc1de935e06cce904bd2d98a406_0",
+                "lines": "    app.run(host=\"0.0.0.0\", port=5000, debug=True)",
+                "is_ignored": false,
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        }
+    ],
+    "errors": [
+        {
+            "code": 3,
+            "level": "warn",
+            "type": "Syntax error",
+            "message": "Syntax error at line modelo-gemini/codigo-gerado.py:108:\n `%` was unexpected",
+            "path": "modelo-gemini/codigo-gerado.py"
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": "Syntax error",
+            "message": "Syntax error at line semgrep.json:1:\n missing element",
+            "path": "semgrep.json"
+        }
+    ],
+    "paths": {
+        "scanned": [
+            "modelo-claude/codigo-gerado.py",
+            "modelo-gemini/codigo-gerado.py",
+            "modelo-gpt4.0/codigo-gerado.py",
+            "modelo-gpt4.1/codigo-gerado.py",
+            "modelo-gpt5.1mini/codigo-gerado.py",
+            "semgrep.json"
+        ]
+    },
+    "time": {
+        "rules": [],
+        "rules_parse_time": 19.902316093444824,
+        "profiling_times": {
+            "config_time": 19.419718265533447,
+            "core_time": 26.634342432022095,
+            "ignores_time": 0.009475231170654297,
+            "total_time": 46.14544343948364
+        },
+        "parsing_time": {
+            "total_time": 0.0,
+            "per_file_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_files": []
+        },
+        "scanning_time": {
+            "total_time": 11.989335775375366,
+            "per_file_time": {
+                "mean": 0.666074209743076,
+                "std_dev": 1.040388012284513
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.9598062271422912,
+                "count_ratio": 0.2777777777777778
+            },
+            "very_slow_files": [
+                {
+                    "fpath": "modelo-gemini/codigo-gerado.py",
+                    "ftime": 2.1638269424438477
+                },
+                {
+                    "fpath": "modelo-gpt4.0/codigo-gerado.py",
+                    "ftime": 2.2004599571228027
+                },
+                {
+                    "fpath": "modelo-claude/codigo-gerado.py",
+                    "ftime": 2.2200801372528076
+                },
+                {
+                    "fpath": "modelo-gpt4.1/codigo-gerado.py",
+                    "ftime": 2.2227420806884766
+                },
+                {
+                    "fpath": "modelo-gpt5.1mini/codigo-gerado.py",
+                    "ftime": 2.7003300189971924
+                }
+            ]
+        },
+        "matching_time": {
+            "total_time": 0.0,
+            "per_file_and_rule_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_rules_on_files": []
+        },
+        "tainting_time": {
+            "total_time": 0.0,
+            "per_def_and_rule_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_rules_on_defs": []
+        },
+        "fixpoint_timeouts": [],
+        "prefiltering": {
+            "project_level_time": 0.0,
+            "file_level_time": 0.0,
+            "rules_with_project_prefilters_ratio": 0.0,
+            "rules_with_file_prefilters_ratio": 0.9839594765723935,
+            "rules_selected_ratio": 0.07070493879273955,
+            "rules_matched_ratio": 0.07070493879273955
+        },
+        "targets": [],
+        "total_bytes": 0,
+        "max_memory_bytes": 11609917504
+    },
+    "engine_requested": "OSS",
+    "interfile_languages_used": [],
+    "skipped_rules": [],
+    "profiling_results": []
+}
