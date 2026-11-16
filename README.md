@@ -34,6 +34,7 @@ Cada experimento segue, de forma geral, o seguinte fluxo:
 - GPT-4.0
 - GPT-4.1
 - GPT-5.1 Mini
+- Gemini 3.5 Flash
 
 ## Ferramentas Utilizadas
 
